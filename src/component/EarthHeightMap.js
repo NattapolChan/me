@@ -143,7 +143,7 @@ function MultipleBoxes() {
 }
 
 const MultipleAchievement = () => {
-  const myFont = require('../utils/Gentilis.json');
+  const myFont = require('../../utils/Gentilis.json');
   const font = new FontLoader().parse(myFont);
   
   return(
