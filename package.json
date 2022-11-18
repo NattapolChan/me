@@ -1,0 +1,24 @@
+{
+  "name": "me-next",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https//NattapolChan.github.io/me",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.12",
+    "@chakra-ui/react": "^2.4.1",
+    "@fortawesome/free-brands-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@react-three/fiber": "^8.9.1",
+    "camera-controls": "^1.37.3",
+    "next": "13.0.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "three": "^0.146.0"
+  }
+}
