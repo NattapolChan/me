@@ -2,7 +2,7 @@
   "name": "me-next",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https//NattapolChan.github.io/me",
+  "homepage": "https//nattapolchan.github.io/me-next/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
