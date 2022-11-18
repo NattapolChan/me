@@ -4,5 +4,5 @@ const nextConfig = {
 }
 
 module.exports = module.exports = {
-  assetPrefix: '/me/',
+  assetPrefix: '/me-next/',
 }
