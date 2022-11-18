@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useMemo, useLayoutEffect} from "react";
 import { Canvas, useFrame , useThree} from "@react-three/fiber";
-import elevationarray from "./Elevation_data/Elevation";
+import elevationarray from "../Elevation_data/Elevation";
 import * as THREE from 'three';
 import CameraControls from "camera-controls";
 import { Container} from "@chakra-ui/react";
@@ -143,7 +143,7 @@ function MultipleBoxes() {
 }
 
 const MultipleAchievement = () => {
-  const myFont = require('.././utils/Gentilis.json');
+  const myFont = require('../utils/Gentilis.json');
   const font = new FontLoader().parse(myFont);
   
   return(

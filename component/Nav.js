@@ -96,13 +96,13 @@ import React from 'react';
       <>
       {NAV_ITEMS.map((navItem)=>(
         <Center key={navItem.label} 
-          w='6.5em'
+          minW ='6.5em'
+          w = '20%'
           pl={'2px'}
           pr={'2px'}
           pt={'0px'}
           pb={'0px'}
           borderWidth={'1px'}
-          // borderColor={'white'}
           _hover={{
             borderColor: linkHoverColor,
             color: linkHoverColor
@@ -113,7 +113,7 @@ import React from 'react';
         <Popover trigger={'hover'} placement={'bottom-start'}>
           <PopoverTrigger>
             <Link
-              p={1}
+              p={2}
               href={navItem.href ?? '#'}
               fontSize={'xl'}
               fontWeight={700}
