@@ -3,7 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = module.exports = {
+const isProd = process.env.NODE_ENV === 'production'
+
+module.exports = {
+  assetPrefix: isProd ? 'https:/nattapolchan.github.io/me-next' : '',
   images: {
     loader: 'akamai',
     path: '',
