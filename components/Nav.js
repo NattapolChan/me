@@ -1,34 +1,23 @@
 import {
-    Box,
-    Flex,
-    Text,
-    Stack,
-    HStack,
-    Grid,
-    GridItem,
-    Collapse,
-    Center,
-    Icon,
-    Popover,
-    PopoverTrigger,
-    PopoverContent,
-    useColorModeValue,
-    useBreakpointValue,
-    useDisclosure,
-    VStack,
-  } from '@chakra-ui/react';
-  import {
-    LinkIcon,
-    ExternalLinkIcon,
-    NotAllowedIcon,
-    ArrowBackIcon,
-    ArrowRightIcon,
-  } from '@chakra-ui/icons';
-  import Link, { LinkProps } from "next/link";
-  import { Link as ChakraLink} from "@chakra-ui/react"
+  Box,
+  Flex,
+  Text,
+  Stack,
+  Center,
+  Icon,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  VStack,
+} from '@chakra-ui/react';
+import {
+  LinkIcon,
+  NotAllowedIcon,
+  ArrowRightIcon,
+} from '@chakra-ui/icons';
+import Link from "next/link";
+import { Link as ChakraLink} from "@chakra-ui/react"
 import React from "react";
-
-
 
   export default function Navbar() {
     const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
@@ -152,16 +141,6 @@ import React from "react";
     );
   }
 
-  const ChakraNextLink = React.forwardRef(({ href, children, ...props }, ref) => {
-    return (
-      <Link href={href} passHref>
-        <ChakraLink ref={ref} {...props}>
-          {children}
-        </ChakraLink>
-      </Link>
-    );
-  });
-
   const DesktopNav = () => {
     const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
     const linkColor = color_scheme[4];
@@ -263,6 +242,17 @@ import React from "react";
         </ChakraNextLink>
     );
   };
+
+  const ChakraNextLink = React.forwardRef(({ href, children, ...props }, ref) => {
+    return (
+      <Link href={href} passHref>
+        <ChakraLink ref={ref} {...props}>
+          {children}
+        </ChakraLink>
+      </Link>
+    );
+  });
+
   
   const NAV_ITEMS = [
     {

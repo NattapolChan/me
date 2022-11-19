@@ -2,6 +2,7 @@ import React from 'react'
 import { Flex, Box, HStack, ChakraProvider } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import dynamic from 'next/dynamic'
 
 const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','#707793']
 
