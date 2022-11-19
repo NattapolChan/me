@@ -18,8 +18,9 @@ import {
 import Link from "next/link";
 import { Link as ChakraLink} from "@chakra-ui/react"
 import React from "react";
+import dynamic from 'next/dynamic';
 
-  export default function Navbar() {
+function Navbar() {
     const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
     return (
       <>
@@ -27,7 +28,6 @@ import React from "react";
             <Center w={"50%"} bg={'transparent'} zIndex='10'>
                 <ChakraNextLink 
                 href = '/'
-                  // onClick={(e) => e.preventDefault()}
                   textAlign= {'center'}
                   fontFamily={'heading'}
                   color={'gray.400'}
@@ -252,6 +252,13 @@ import React from "react";
       </Link>
     );
   });
+
+  const NavwithNoSSR = (Component) => dynamic(
+    () => Promise.resolve(Component),
+    { ssr: false },
+  );
+  
+  export default NavwithNoSSR(Navbar);
 
   
   const NAV_ITEMS = [

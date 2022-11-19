@@ -7,13 +7,14 @@ import { Container} from "@chakra-ui/react";
 import { extend } from '@react-three/fiber'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
+import dynamic from "next/dynamic";
 
 extend({ TextGeometry })
 
 const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','#707793', '#89a0e0']
 CameraControls.install({ THREE })
 
-export default function Threejs() {
+function Threejs() {
   return (
       <>
         <Container display={{base:"none", lg:"block"}} h='calc(100vh)' 
@@ -47,6 +48,13 @@ export default function Threejs() {
       </>
   );
 }
+
+const ThreewithNoSSR = (Component) => dynamic(
+  () => Promise.resolve(Component),
+  { ssr: false },
+);
+
+export default ThreewithNoSSR(Threejs);
 
 function Controls_M() {
   const camera = useThree((state) => state.camera)
