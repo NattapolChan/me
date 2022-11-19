@@ -24,8 +24,10 @@ import {
     ArrowBackIcon,
     ArrowRightIcon,
   } from '@chakra-ui/icons';
-  import Link from 'next/link';
-import React from 'react';
+  import Link, { LinkProps } from "next/link";
+  import { Link as ChakraLink} from "@chakra-ui/react"
+import React from "react";
+
 
 
   export default function Navbar() {
@@ -34,10 +36,8 @@ import React from 'react';
       <>
         <Flex maxWidth="100%" pt={'70px'} overflow="hidden" display={{base: 'none', xl: 'flex'}} zIndex='10' bgColor={color_scheme[1]}>
             <Center w={"50%"} bg={'transparent'} zIndex='10'>
-              <Link 
-                href='/me-next/'
-              >
-                <Box 
+                <ChakraNextLink 
+                href = '/'
                   // onClick={(e) => e.preventDefault()}
                   textAlign= {'center'}
                   fontFamily={'heading'}
@@ -48,8 +48,7 @@ import React from 'react';
                   _hover={{textDecoration:'none', color: color_scheme[0]}}
                 >
                   NC
-                  </Box>
-              </Link>
+                  </ChakraNextLink>
             </Center>
             <Box w={"50%"} zIndex='10'>
               <DesktopNav />
@@ -64,10 +63,8 @@ import React from 'react';
               h='10vh'
               bg={color_scheme[1]}>
           <Center bg={'transparent'} >
-              <Link 
+            <ChakraNextLink textAlign= {'center'}
               href='/'
-              >
-                <Box textAlign= {'center'}
               fontFamily={'heading'}
               color={'gray.400'}
               bg={color_scheme[1]}
@@ -80,8 +77,7 @@ import React from 'react';
               _hover={{textDecoration:'none', color: color_scheme[0]}}
               >
                 NC
-              </Box>
-            </Link>
+              </ChakraNextLink>
           </Center>
           <Flex h='70vh' align={'flex-start'}
                 direction={'row'} spacing='5vh' justify={'space-evenly'} minW='14em'>
@@ -118,10 +114,8 @@ import React from 'react';
         >
         <Popover trigger={'hover'} placement={'bottom-start'}>
           <PopoverTrigger>
-            <Link
-              href={navItem.href || '/'}
-              >
-                <Box fontSize={'xl'}
+                <ChakraNextLink fontSize={'xl'}
+                href={navItem.href ?? '#'}
                 fontWeight={700}
                 _hover={{
                   textDecoration: 'none'
@@ -129,8 +123,7 @@ import React from 'react';
                 p={2}
                 >
               {navItem.label}
-              </Box>
-            </Link>
+              </ChakraNextLink>
           </PopoverTrigger>
           {navItem.children && (
             <PopoverContent
@@ -159,6 +152,16 @@ import React from 'react';
     );
   }
 
+  const ChakraNextLink = React.forwardRef(({ href, children, ...props }, ref) => {
+    return (
+      <Link href={href} passHref>
+        <ChakraLink ref={ref} {...props}>
+          {children}
+        </ChakraLink>
+      </Link>
+    );
+  });
+
   const DesktopNav = () => {
     const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
     const linkColor = color_scheme[4];
@@ -185,18 +188,17 @@ import React from 'react';
             >
               <Popover trigger={'hover'} placement={'bottom-start'}>
                 <PopoverTrigger>
-                  <Link href={navItem.href || '/'}>
-                  <Box
-                    p={2}
-                    fontSize={'xl'}
-                    fontWeight={800}
-                    _hover={{
-                      textDecoration: 'none'
-                    }}
-                    >
-                    {navItem.label}
-                    </Box>
-                  </Link>
+                <ChakraNextLink
+                  p={2}
+                  fontSize={'xl'}
+                  fontWeight={800}
+                  _hover={{
+                    textDecoration: 'none'
+                  }}
+                  href={navItem.href ?? '#'}
+                  >
+                  {navItem.label}
+                  </ChakraNextLink>
                 </PopoverTrigger>
                 {navItem.children && (
                   <PopoverContent
@@ -228,10 +230,8 @@ import React from 'react';
   const SubNav = ({ label, href, subLabel }) => {
     const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
     return (
-      <Link
-        href={href||'/#'}
-        >
-          <Box role={'group'}
+        <ChakraNextLink role={'group'}
+        href={href ?? '#'}
         display={'block'}
         p={2}
         _hover={{ 
@@ -260,8 +260,7 @@ import React from 'react';
             <Icon color={color_scheme[0]} w={5} h={5} as={ href ? (href[0]=='h' ? LinkIcon : ArrowRightIcon) : NotAllowedIcon}/>
           </Flex>
         </Stack>
-        </Box>
-      </Link>
+        </ChakraNextLink>
     );
   };
   
