@@ -1,6 +1,6 @@
 import { Center, Text, VStack, Box, Container, ChakraProvider } from "@chakra-ui/react";
-import Contact from "../component/Contact";
-import Navbar from "../component/Nav";
+import Contact from "/component/Contact";
+import Navbar from "/component/Nav";
 
 const About = () => {
   const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
