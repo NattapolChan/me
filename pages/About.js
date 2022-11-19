@@ -8,7 +8,7 @@ const About = () => {
     <ChakraProvider>
         <Navbar />
         <Box  w='100vw'>
-            <Center display='block' w='100vw' p='20' bgColor={color_scheme[1]}>
+            <Center display='block' w='100vw' p='20' minH='90vh' bgColor={color_scheme[1]}>
                 <VStack direction={'column'} m='auto'spacing={'20px'} maxW={'3xl'} color={'gray.400'} textAlign='justify'>
                     <Text fontSize='4xl' as={'b'}>Chanpaisit Nattapol</Text>
                     <Text fontSize='xl' as='b'>

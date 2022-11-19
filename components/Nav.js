@@ -18,13 +18,25 @@ import {
 import Link from "next/link";
 import { Link as ChakraLink} from "@chakra-ui/react"
 import React from "react";
-import dynamic from 'next/dynamic';
 
-function Navbar() {
+
+const ChakraNextLink = React.forwardRef(({ href, children, ...props }, ref) => {
+  return (
+    <Link href={href} passHref>
+      <ChakraLink ref={ref} {...props}>
+        {children}
+      </ChakraLink>
+    </Link>
+  );
+});
+
+
+export default function Navbar() {
     const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
     return (
       <>
-        <Flex maxWidth="100%" pt={'70px'} overflow="hidden" display={{base: 'none', xl: 'flex'}} zIndex='10' bgColor={color_scheme[1]}>
+        <Flex maxWidth="100%" pt={'70px'} display={{base: 'none', xl: 'flex'}} 
+        zIndex='10' bgColor={color_scheme[1]}>
             <Center w={"50%"} bg={'transparent'} zIndex='10'>
                 <ChakraNextLink 
                 href = '/'
@@ -35,6 +47,7 @@ function Navbar() {
                   fontWeight={800}
                   className='hide'
                   _hover={{textDecoration:'none', color: color_scheme[0]}}
+                  zIndex='10'
                 >
                   NC
                   </ChakraNextLink>
@@ -51,7 +64,7 @@ function Navbar() {
               zIndex='10'
               h='10vh'
               bg={color_scheme[1]}>
-          <Center bg={'transparent'} >
+          <Center bg={'transparent'} zIndex='10'>
             <ChakraNextLink textAlign= {'center'}
               href='/'
               fontFamily={'heading'}
@@ -69,7 +82,8 @@ function Navbar() {
               </ChakraNextLink>
           </Center>
           <Flex h='70vh' align={'flex-start'}
-                direction={'row'} spacing='5vh' justify={'space-evenly'} minW='14em'>
+                direction={'row'} spacing='5vh' justify={'space-evenly'} minW='14em'
+                zIndex='10'>
             <MobileNav />
           </Flex>
       </VStack>
@@ -100,6 +114,7 @@ function Navbar() {
           }}
           bgColor={color_scheme[1]}
           color={linkColor}
+          zIndex='10'
         >
         <Popover trigger={'hover'} placement={'bottom-start'}>
           <PopoverTrigger>
@@ -127,7 +142,7 @@ function Navbar() {
                 borderColor: 'white',
               }}
             >
-              <Stack>
+              <Stack zIndex='10'>
                 {navItem.children.map((child) => (
                   <SubNav key={child.label} {...child} />
                 ))}
@@ -148,7 +163,7 @@ function Navbar() {
     const popoverContentBgColor = color_scheme[1];
     return (
       <Stack direction={'row'} spacing={4} zIndex='10'>
-        <Flex justifyContent={"flex-end"} gap = {6}>
+        <Flex justifyContent={"flex-end"} gap = {6} zIndex='10'>
           {NAV_ITEMS.map((navItem) => (
             <Box key={navItem.label} 
                 w='100%'
@@ -164,8 +179,9 @@ function Navbar() {
                 }}
                 bgColor={color_scheme[1]}
                 color={linkColor}
+                zIndex='10'
             >
-              <Popover trigger={'hover'} placement={'bottom-start'}>
+              <Popover trigger={'hover'} placement={'bottom-start'} zIndex='10'>
                 <PopoverTrigger>
                 <ChakraNextLink
                   p={2}
@@ -175,28 +191,30 @@ function Navbar() {
                     textDecoration: 'none'
                   }}
                   href={navItem.href ?? '#'}
+                  zIndex='10'
                   >
                   {navItem.label}
                   </ChakraNextLink>
                 </PopoverTrigger>
                 {navItem.children && (
                   <PopoverContent
-                    border={0}
-                    boxShadow={'xl'}
-                    bg={popoverContentBgColor}
-                    rounded='0px'
-                    _hover={{
-                      borderWidth: '2px',
-                      borderColor: 'white',
-                    }}
-                    p={4}
-                    minW={'sm'}>
-                    <Stack>
-                      {navItem.children.map((child) => (
-                        <SubNav key={child.label} {...child} />
-                      ))}
-                    </Stack>
-                  </PopoverContent>
+                  border={0}
+                  boxShadow={'xl'}
+                  bg={popoverContentBgColor}
+                  rounded='0px'
+                  p={4}
+                  minW={'sm'}
+                  _hover={{
+                    borderWidth: '2px',
+                    borderColor: 'white',
+                  }}
+                >
+                  <Stack zIndex='10'>
+                    {navItem.children.map((child) => (
+                      <SubNav key={child.label} {...child} />
+                    ))}
+                  </Stack>
+                </PopoverContent>
                 )}
               </Popover>
             </Box>
@@ -215,8 +233,10 @@ function Navbar() {
         p={2}
         _hover={{ 
         bgColor: 'none',
-      }}>
-        <Stack direction={'row'} align={'center'}>
+      }}
+        zIndex='10'
+      >
+        <Stack direction={'row'} align={'center'} zIndex='10'>
           <Box 
               color= {'gray.400'}
               _groupHover={{ color: color_scheme[0] }}
@@ -243,22 +263,6 @@ function Navbar() {
     );
   };
 
-  const ChakraNextLink = React.forwardRef(({ href, children, ...props }, ref) => {
-    return (
-      <Link href={href} passHref>
-        <ChakraLink ref={ref} {...props}>
-          {children}
-        </ChakraLink>
-      </Link>
-    );
-  });
-
-  const NavwithNoSSR = (Component) => dynamic(
-    () => Promise.resolve(Component),
-    { ssr: false },
-  );
-  
-  export default NavwithNoSSR(Navbar);
 
   
   const NAV_ITEMS = [

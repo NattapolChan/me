@@ -49,12 +49,7 @@ function Threejs() {
   );
 }
 
-const ThreewithNoSSR = (Component) => dynamic(
-  () => Promise.resolve(Component),
-  { ssr: false },
-);
-
-export default ThreewithNoSSR(Threejs);
+export default Threejs;
 
 function Controls_M() {
   const camera = useThree((state) => state.camera)

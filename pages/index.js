@@ -10,12 +10,12 @@ export default function Home() {
   const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
   return (
     <ChakraProvider>
+      <Navbar />
       <Box pos = "fixed" bg={color_scheme[1]}
       opacity={'1'} height={'calc(100vh)'} width={'calc(100vw)'} 
-      zIndex={"-10"} left='0' margin='0'>
+      left='0' margin='0'>
         <Threejs/>
       </Box>
-      <Navbar />
       <Contact />
     </ChakraProvider>
   )

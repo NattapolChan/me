@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic'
 
 const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','#707793']
 
-function Contact(){
+export default function Contact(){
     return(
         <ChakraProvider>
             <Box display='block' position='fixed' bg={color_scheme[3]} bottom='0' zIndex='20' width='100vw' overflow='visible' paddingTop='5px' paddingBottom='5px'>
@@ -22,10 +22,3 @@ function Contact(){
         </ChakraProvider>
     );
 }
-
-const ContactwithNoSSR = (Component) => dynamic(
-    () => Promise.resolve(Component),
-    { ssr: false },
-  );
-  
-  export default ContactwithNoSSR(Contact);
