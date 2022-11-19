@@ -9,7 +9,6 @@ import {
     Collapse,
     Center,
     Icon,
-    Link,
     Popover,
     PopoverTrigger,
     PopoverContent,
@@ -25,6 +24,7 @@ import {
     ArrowBackIcon,
     ArrowRightIcon,
   } from '@chakra-ui/icons';
+  import Link from 'next/link';
 import React from 'react';
 
 
@@ -36,16 +36,19 @@ import React from 'react';
             <Center w={"50%"} bg={'transparent'} zIndex='10'>
               <Link 
                 href='/me-next/'
-                // onClick={(e) => e.preventDefault()}
-                textAlign= {'center'}
-                fontFamily={'heading'}
-                color={'gray.400'}
-                fontSize='1.6em'
-                fontWeight={800}
-                className='hide'
-                _hover={{textDecoration:'none', color: color_scheme[0]}}
               >
-                NC
+                <Box 
+                  // onClick={(e) => e.preventDefault()}
+                  textAlign= {'center'}
+                  fontFamily={'heading'}
+                  color={'gray.400'}
+                  fontSize='1.6em'
+                  fontWeight={800}
+                  className='hide'
+                  _hover={{textDecoration:'none', color: color_scheme[0]}}
+                >
+                  NC
+                  </Box>
               </Link>
             </Center>
             <Box w={"50%"} zIndex='10'>
@@ -61,21 +64,23 @@ import React from 'react';
               h='10vh'
               bg={color_scheme[1]}>
           <Center bg={'transparent'} >
-            <Link 
-            href='/me-next/'
-            textAlign= {'center'}
-            fontFamily={'heading'}
-            color={'gray.400'}
-            bg={color_scheme[3]}
-            pt='0.1em'
-            pb='0.1em'
-            fontSize='1.6em'
-            fontWeight={800}
-            className='hide'
-            width={'100%'}
-            _hover={{textDecoration:'none', color: color_scheme[0]}}
-            >
-              NC
+              <Link 
+              href='/'
+              >
+                <Box textAlign= {'center'}
+              fontFamily={'heading'}
+              color={'gray.400'}
+              bg={color_scheme[1]}
+              pt='0.1em'
+              pb='0.1em'
+              fontSize='1.6em'
+              fontWeight={800}
+              className='hide'
+              width={'100%'}
+              _hover={{textDecoration:'none', color: color_scheme[0]}}
+              >
+                NC
+              </Box>
             </Link>
           </Center>
           <Flex h='70vh' align={'flex-start'}
@@ -114,15 +119,17 @@ import React from 'react';
         <Popover trigger={'hover'} placement={'bottom-start'}>
           <PopoverTrigger>
             <Link
-              p={2}
-              href={navItem.href ?? '#'}
-              fontSize={'xl'}
-              fontWeight={700}
-              _hover={{
-                textDecoration: 'none'
-              }}
+              href={navItem.href || '/'}
               >
+                <Box fontSize={'xl'}
+                fontWeight={700}
+                _hover={{
+                  textDecoration: 'none'
+                }}
+                p={2}
+                >
               {navItem.label}
+              </Box>
             </Link>
           </PopoverTrigger>
           {navItem.children && (
@@ -178,9 +185,9 @@ import React from 'react';
             >
               <Popover trigger={'hover'} placement={'bottom-start'}>
                 <PopoverTrigger>
-                  <Link
+                  <Link href={navItem.href || '/'}>
+                  <Box
                     p={2}
-                    href={navItem.href ?? '#'}
                     fontSize={'xl'}
                     fontWeight={800}
                     _hover={{
@@ -188,6 +195,7 @@ import React from 'react';
                     }}
                     >
                     {navItem.label}
+                    </Box>
                   </Link>
                 </PopoverTrigger>
                 {navItem.children && (
@@ -221,14 +229,14 @@ import React from 'react';
     const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
     return (
       <Link
-        href={href}
-        role={'group'}
+        href={href||'/#'}
+        >
+          <Box role={'group'}
         display={'block'}
         p={2}
         _hover={{ 
         bgColor: 'none',
-      }}
-        >
+      }}>
         <Stack direction={'row'} align={'center'}>
           <Box 
               color= {'gray.400'}
@@ -252,6 +260,7 @@ import React from 'react';
             <Icon color={color_scheme[0]} w={5} h={5} as={ href ? (href[0]=='h' ? LinkIcon : ArrowRightIcon) : NotAllowedIcon}/>
           </Flex>
         </Stack>
+        </Box>
       </Link>
     );
   };
@@ -290,11 +299,11 @@ import React from 'react';
     {
       label: 'Resume',
     //   href: 'https://docs.google.com/document/d/1GJzsIIE7Eez76El0f2XoZvN4Wolvu9-fxL5yCWRA200/edit?usp=sharing',
-      href: '/me-next/Chanpaisit_Nattapol_Resume.pdf',
+      href: '/Chanpaisit_Nattapol_Resume.pdf',
     },
     {
       label: 'About',
-      href: '/me-next/About',
+      href: '/About',
       // href: '/me/utils/Chanpaisit_Nattapol_Resume.pdf',
     },
   ];
