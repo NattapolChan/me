@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import '../../styles/Home.module.css'
-import Navbar from '../../component/Nav'
-import Threejs from '../../component/EarthHeightMap'
-import Contact from '../../component/Contact'
+import '../styles/Home.module.css'
+import Navbar from '../component/Nav'
+import Threejs from '../component/EarthHeightMap'
+import Contact from '../component/Contact'
 import { Box, ChakraProvider } from '@chakra-ui/react'
 
 export default function Home() {
