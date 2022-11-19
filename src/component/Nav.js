@@ -32,10 +32,10 @@ import React from 'react';
     const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
     return (
       <>
-        <Flex maxWidth="100%" pt={'70px'} overflow="hidden" display={{base: 'none', xl: 'flex'}}>
-            <Center w={"50%"} bg={'transparent'} >
+        <Flex maxWidth="100%" pt={'70px'} overflow="hidden" display={{base: 'none', xl: 'flex'}} zIndex='10' bgColor={color_scheme[1]}>
+            <Center w={"50%"} bg={'transparent'} zIndex='10'>
               <Link 
-                href='/'
+                href='/me-next/'
                 // onClick={(e) => e.preventDefault()}
                 textAlign= {'center'}
                 fontFamily={'heading'}
@@ -48,20 +48,21 @@ import React from 'react';
                 NC
               </Link>
             </Center>
-            <Box w={"50%"} >
+            <Box w={"50%"} zIndex='10'>
               <DesktopNav />
             </Box>
         </Flex>
         <VStack display={{base:'block', xl: 'none'}} 
-              overflow={'hidden'} 
               position='relative'
               align={'center'}
               minW={'14em'}
-              m='auto'>
+              m='auto'
+              zIndex='10'
+              h='10vh'
+              bg={color_scheme[1]}>
           <Center bg={'transparent'} >
             <Link 
-            href='/'
-            // onClick={(e) => e.preventDefault()}
+            href='/me-next/'
             textAlign= {'center'}
             fontFamily={'heading'}
             color={'gray.400'}
@@ -157,8 +158,8 @@ import React from 'react';
     const linkHoverColor = color_scheme[0];
     const popoverContentBgColor = color_scheme[1];
     return (
-      <Stack direction={'row'} spacing={4}>
-        <Flex justifyContent={"flex-end"} gap = {6} overflow>
+      <Stack direction={'row'} spacing={4} zIndex='10'>
+        <Flex justifyContent={"flex-end"} gap = {6}>
           {NAV_ITEMS.map((navItem) => (
             <Box key={navItem.label} 
                 w='100%'
@@ -289,11 +290,11 @@ import React from 'react';
     {
       label: 'Resume',
     //   href: 'https://docs.google.com/document/d/1GJzsIIE7Eez76El0f2XoZvN4Wolvu9-fxL5yCWRA200/edit?usp=sharing',
-      href: '/Chanpaisit_Nattapol_Resume.pdf',
+      href: '/me-next/Chanpaisit_Nattapol_Resume.pdf',
     },
     {
       label: 'About',
-      href: '/About',
+      href: '/me-next/About',
       // href: '/me/utils/Chanpaisit_Nattapol_Resume.pdf',
     },
   ];

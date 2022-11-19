@@ -1,14 +1,15 @@
 import { Center, Text, VStack, Box, Container, ChakraProvider } from "@chakra-ui/react";
-import Contact from "../component/Contact";
-import Navbar from "../component/Nav";
+import Contact from "../../component/Contact";
+import Navbar from "../../component/Nav";
 
 const About = () => {
+  const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
   return (
     <ChakraProvider>
-        <Box  w='full' h='100vh' bgColor='gray.600'>
-            <Navbar />
-            <Center display='block' pos='absolute' w='100vw' h='80%' top='8%' p='10'>
-                <VStack direction={'column'} m='auto' spacing={'20px'} maxW={'3xl'} color={'gray.400'} textAlign='justify'>
+        <Navbar />
+        <Box  w='100vw'>
+            <Center display='block' w='100vw' p='20' bgColor={color_scheme[1]}>
+                <VStack direction={'column'} m='auto'spacing={'20px'} maxW={'3xl'} color={'gray.400'} textAlign='justify'>
                     <Text fontSize='4xl' as={'b'}>Chanpaisit Nattapol</Text>
                     <Text fontSize='xl' as='b'>
                         I'm Chan, Math & ML enthusiast. <br/> Ex-Full time Physics tutor.
