@@ -14,7 +14,7 @@ export default function Home() {
       <Box pos = "fixed" bg={color_scheme[1]}
       opacity={'1'} height={'calc(100vh)'} width={'calc(100vw)'} 
       left='0' margin='0'>
-        <Threejs/>
+        {/* <Threejs/> */}
       </Box>
       <Contact />
     </ChakraProvider>
