@@ -188,22 +188,7 @@ const MultipleAchievement = () => {
 }
 
 const Point = (props) => {
-  console.log(props)
-  const verticesOfCube = [
-    -1, -1, -1,    1, -1, -1,    1,  1, -1,    -1,  1, -1,
-    -1, -1,  1,    1, -1,  1,    1,  1,  1,    -1,  1,  1,
-    ];
-  const indicesOfFaces = [
-    2, 1, 0,    0, 3, 2,
-    0, 4, 7,    7, 3, 0,
-    0, 1, 5,    5, 4, 0,
-    1, 2, 6,    6, 5, 1,
-    2, 3, 7,    7, 6, 2,
-    4, 5, 6,    6, 7, 4,
-  ];
   const radius = 0.15;
-  const detail = 2;
-  const polyhedron = useMemo(() => new THREE.PolyhedronGeometry(verticesOfCube, indicesOfFaces, radius, detail))
   const octahedron = new THREE.OctahedronGeometry(radius);
   return(
     <mesh rotation={[0,-Math.PI*60/180,0]} position={[-2.0 +props.location[0]/10, 1.4+props.location[2], -7.98 + 12 - props.location[1]/10]}>
