@@ -22,14 +22,14 @@ function Threejs() {
           <Canvas style={{ height: "120vh", width: "100vw" }}
             camera = {{position: [0.0,6.1,0.0]}}>
               <Suspense fallback={null}>
-                  {/* <MultipleBoxes/>
+                  <MultipleBoxes/>
                   <MultipleAchievement />
                   <directionalLight
                     color='#FFFF'
                     intensity={0.7}
                     position={[8, -4, 1]}
-                  /> */}
-                  <Box position={[0,0,0]} height={1} />
+                  />
+                  {/* <Box position={[0,0,0]} height={1} /> */}
               </Suspense>
               <Controls_D />
               {/* <OrbitControls target={[-0.2,1,0]} maxDistance={5} /> */}
@@ -39,13 +39,13 @@ function Threejs() {
                   w='calc(100vw)' left='0' padding='0'>
           <Canvas style={{ height: "120vh", width: "100vw" }}>
             <Suspense fallback={null}>
-              {/* <MultipleBoxes/>
+              <MultipleBoxes/>
               <MultipleAchievement />
               <directionalLight
                 color='#FFFF'
                 intensity={0.7}
                 position={[8, -2, 1]}
-              /> */}
+              />
               <Box position={[0,0,0]} height={1} />
             </Suspense>
             <Controls_M />
