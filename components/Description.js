@@ -1,4 +1,5 @@
 import React from 'react'
+import { Text, VStack } from '@chakra-ui/react'
 
 export default function Description(){
     return(
@@ -33,5 +34,5 @@ export default function Description(){
             Currently, I am a Tech Director for Thai Student Society, Singapore.
         </Text>
     </VStack>
-)
+    )
 }
