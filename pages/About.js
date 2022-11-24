@@ -6,7 +6,7 @@ const About = () => {
   const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
   return (
     <ChakraProvider>
-        <Navbar />
+        {/* <Navbar /> */}
         <Box  w='100vw'>
             <Center display='block' w='100vw' p='20' minH='90vh' bgColor={color_scheme[1]}>
                 <VStack direction={'column'} m='auto'spacing={'20px'} maxW={'3xl'} color={'gray.400'} textAlign='justify'>
@@ -41,7 +41,7 @@ const About = () => {
                     </Text>
                 </VStack>
             </Center>
-            <Contact />
+            {/* <Contact /> */}
         </Box>
     </ChakraProvider>
   );
