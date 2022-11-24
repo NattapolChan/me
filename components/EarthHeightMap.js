@@ -4,6 +4,7 @@ import elevationarray from "../Elevation_data/Elevation";
 import * as THREE from 'three';
 import CameraControls from "camera-controls";
 import { Container} from "@chakra-ui/react";
+import { Suspense } from "react";
 import { extend } from '@react-three/fiber'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
@@ -20,27 +21,31 @@ function Threejs() {
                   w='calc(100vw)' margin={'0'} padding='0'>
           <Canvas style={{ height: "120vh", width: "100vw" }}
             camera = {{position: [0.0,6.1,0.0]}}>
-            <MultipleBoxes/>
-            <MultipleAchievement />
-            <directionalLight
-              color='#FFFF'
-              intensity={0.7}
-              position={[8, -4, 1]}
-            />
-            <Controls_D />
-            {/* <OrbitControls target={[-0.2,1,0]} maxDistance={5} /> */}
+              <Suspense fallback={null}>
+                  <MultipleBoxes/>
+                  <MultipleAchievement />
+                  <directionalLight
+                    color='#FFFF'
+                    intensity={0.7}
+                    position={[8, -4, 1]}
+                  />
+              </Suspense>
+              <Controls_D />
+              {/* <OrbitControls target={[-0.2,1,0]} maxDistance={5} /> */}
           </Canvas>
         </Container>
         <Container display={{base:"block", lg:"none"}} margin='0' h='calc(100vh)' 
                   w='calc(100vw)' left='0' padding='0'>
           <Canvas style={{ height: "120vh", width: "100vw" }}>
-            <MultipleBoxes/>
-            <MultipleAchievement />
-            <directionalLight
-              color='#FFFF'
-              intensity={0.7}
-              position={[8, -2, 1]}
-            />
+            <Suspense fallback={null}>
+              <MultipleBoxes/>
+              <MultipleAchievement />
+              <directionalLight
+                color='#FFFF'
+                intensity={0.7}
+                position={[8, -2, 1]}
+              />
+            </Suspense>
             <Controls_M />
           </Canvas>
         </Container>
