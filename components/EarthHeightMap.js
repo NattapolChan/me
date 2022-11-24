@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useEffect, useRef, useMemo, useLayoutEffect} from "react";
 import { Canvas, useFrame , useThree} from "@react-three/fiber";
 import elevationarray from "../Elevation_data/Elevation";
 import * as THREE from 'three';
