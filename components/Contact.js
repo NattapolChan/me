@@ -13,11 +13,11 @@ export default function Contact(){
                 <HStack direction='row'  align='center' justify='center' width='100vw' spacing='20px'>
                     <Link href='https://github.com/NattapolChan'>
                         Github
-                        <FontAwesomeIcon icon={faGithub} size = '2x' color={color_scheme[4]} className='icon'/>
+                        {/* <FontAwesomeIcon icon={faGithub} size = '2x' color={color_scheme[4]} className='icon'/> */}
                     </Link>
                     <Link href='https://www.linkedin.com/in/nattapol-chan/'>
                         Linkedin
-                        <FontAwesomeIcon icon={faLinkedin} size = '2x' color={color_scheme[4]} className='icon'/>
+                        {/* <FontAwesomeIcon icon={faLinkedin} size = '2x' color={color_scheme[4]} className='icon'/> */}
                     </Link>
                 </HStack>
             </Box>

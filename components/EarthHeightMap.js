@@ -7,7 +7,6 @@ import { Container} from "@chakra-ui/react";
 import { extend } from '@react-three/fiber'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
-import dynamic from "next/dynamic";
 
 extend({ TextGeometry })
 

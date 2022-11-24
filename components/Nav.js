@@ -17,7 +17,7 @@ import {
 } from '@chakra-ui/icons';
 import Link from "next/link";
 import { Link as ChakraLink} from "@chakra-ui/react"
-import * as React from 'react'
+import React from "react";
 
 
 const ChakraNextLink = React.forwardRef(({ href, children, ...props }, ref) => {
