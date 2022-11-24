@@ -1,5 +1,5 @@
 import { Center, Text, VStack, Box, Container, ChakraProvider } from "@chakra-ui/react";
-import Description from "../components/Description";
+import Description from "/components/Description";
 import Contact from "/components/Contact";
 import Navbar from "/components/Nav";
 

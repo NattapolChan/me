@@ -1,8 +1,7 @@
 import { VStack, Stack, Box, Flex, Icon, LinkIcon, Text } from '@chakra-ui/react'
 import React from 'react'
 import Link from "next/link";
-import { Link as ChakraLink} from "@chakra-ui/react"
-import NAV_ITEMS from '../components/NAV_ITEMS'
+import NAV_ITEMS from '/components/NAV_ITEMS'
 
 const SubNav = ({ label, href, subLabel }) => {
     const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
