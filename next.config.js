@@ -3,7 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
+
+
 module.exports = {
+  future: { webpack5: true },
   target: "serverless",
   async rewrites() {
     return [
