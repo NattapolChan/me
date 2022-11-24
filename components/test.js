@@ -1,5 +1,5 @@
 import { Box } from '@chakra-ui/react'
-import React from 'react'
+import * as React from 'react'
 
 const Test = () => {
     return(

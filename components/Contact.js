@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { Flex, Box, HStack, ChakraProvider } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
