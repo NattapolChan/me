@@ -3,7 +3,6 @@ import Navbar from '/components/Nav'
 import Threejs from '/components/EarthHeightMap'
 import Contact from '/components/Contact'
 import { Box, ChakraProvider } from '@chakra-ui/react'
-import Test from '../components/test'
 
 export default function Home() {
   const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']

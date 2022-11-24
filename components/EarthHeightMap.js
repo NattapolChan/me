@@ -31,8 +31,8 @@ function Threejs() {
                   /> */}
                   <Box position={[0,0,0]} height={1} />
               </Suspense>
-              <Controls_D />
-              {/* <OrbitControls target={[-0.2,1,0]} maxDistance={5} /> */}
+              {/* <Controls_D /> */}
+              <OrbitControls target={[-0.2,1,0]} maxDistance={5} />
           </Canvas>
         </Container>
         <Container display={{base:"block", lg:"none"}} margin='0' h='calc(100vh)' 
@@ -48,7 +48,7 @@ function Threejs() {
               /> */}
               <Box position={[0,0,0]} height={1} />
             </Suspense>
-            <Controls_M />
+            {/* <Controls_M /> */}
           </Canvas>
         </Container>
       </>
