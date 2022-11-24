@@ -1,7 +1,7 @@
 const NAV_ITEMS = [
     {
       label: 'Research',
-      href: '/Research',
+      // href: '/Research',
       children: [
         {
           label: 'Parallel Curves Detection Method based on Hough Transform',
@@ -32,8 +32,8 @@ const NAV_ITEMS = [
     },
     {
       label: 'Resume',
-    //   href: 'https://docs.google.com/document/d/1GJzsIIE7Eez76El0f2XoZvN4Wolvu9-fxL5yCWRA200/edit?usp=sharing',
-      href: '/Chanpaisit_Nattapol_Resume.pdf',
+      href: 'https://docs.google.com/document/d/1GJzsIIE7Eez76El0f2XoZvN4Wolvu9-fxL5yCWRA200/edit?usp=sharing',
+      // href: '/Chanpaisit_Nattapol_Resume.pdf',
     },
     {
       label: 'About',

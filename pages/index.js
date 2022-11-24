@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Navbar />
       <Box pos = "fixed" bg={color_scheme[1]}
-      opacity={'1'} height={'calc(100vh)'} width={'calc(100vw)'} 
+      opacity={'1'} height={'100vh'} width={'100vw'} 
       left='0' margin='0'>
         <Threejs/>
       </Box>

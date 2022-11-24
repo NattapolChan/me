@@ -84,7 +84,7 @@ export default function Navbar() {
           </Center>
           <Flex h='70vh' align={'flex-start'}
                 direction={'row'} spacing='5vh' justify={'space-evenly'} minW='14em'
-                zIndex='10'>
+                zIndex='10' w='100vw' overflow='hidden'>
             <MobileNav />
           </Flex>
       </VStack>
@@ -102,7 +102,7 @@ export default function Navbar() {
       <>
       {NAV_ITEMS.map((navItem)=>(
         <Center key={navItem.label} 
-          minW ='6.5em'
+          minW ='5.5em'
           w = '20%'
           pl={'2px'}
           pr={'2px'}
@@ -121,7 +121,7 @@ export default function Navbar() {
           <PopoverTrigger>
                 <ChakraNextLink fontSize={'xl'}
                 href={navItem.href ?? '#'}
-                fontWeight={700}
+                fontWeight={600}
                 _hover={{
                   textDecoration: 'none'
                 }}

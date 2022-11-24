@@ -19,7 +19,7 @@ function Threejs() {
       <>
         <Container display={{base:"none", lg:"block"}} h='calc(100vh)' 
                   w='calc(100vw)' margin={'0'} padding='0'>
-          <Canvas style={{ height: "120vh", width: "100vw" }}
+          <Canvas style={{ height: "100vh", width: "100vw" }}
             camera = {{position: [0.0,6.1,0.0]}}>
               <Suspense fallback={null}>
                   <MultipleBoxes/>
@@ -37,7 +37,7 @@ function Threejs() {
         </Container>
         <Container display={{base:"block", lg:"none"}} margin='0' h='calc(100vh)' 
                   w='calc(100vw)' left='0' padding='0'>
-          <Canvas style={{ height: "120vh", width: "100vw" }}>
+          <Canvas style={{ height: "100vh", width: "100vw" }}>
             <Suspense fallback={null}>
               <MultipleBoxes/>
               <MultipleAchievement />
@@ -68,8 +68,8 @@ function Controls_M() {
     {
       t+=10
       state.camera.position.z = -1.6
-      state.camera.position.y = 5.1 + 4 *  Math.exp(-t/4000)
-      state.camera.position.x = 0.1 + 12 * Math.exp(t/3000)/ (1+Math.exp(t/3000)) - 6
+      state.camera.position.y = 5.1 + 4 *  Math.exp(-t/2000)
+      state.camera.position.x = 0.1 + 12 * Math.exp(t/1500)/ (1+Math.exp(t/1500)) - 6
       controls.setLookAt(state.camera.position.x, state.camera.position.y, state.camera.position.z, 0, 1, -1.7, true)
     }
     return controls.update(delta)
