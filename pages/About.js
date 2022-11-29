@@ -7,11 +7,11 @@ const About = () => {
   const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
   return (
     <>
-        <Navbar />
-        <Box  w='full'>
+        <Box  w='full' overflowY='hidden'>
+            <Navbar />
             <Center display='block' w='full' 
                     p='16' minH='90vh' bgColor={color_scheme[1]}
-                    > 
+            > 
                 <Description />
             </Center>
             <Contact />

@@ -37,7 +37,7 @@ export default function Navbar() {
     return (
       <>
         <Flex maxWidth="100%" pt={'70px'} display={{base: 'none', xl: 'flex'}} 
-        zIndex='10' bgColor={color_scheme[1]}>
+        zIndex='10' bgColor={color_scheme[1]} overflow='hidden'>
             <Center w={"50%"} bg={'transparent'} zIndex='10'>
                 <ChakraNextLink 
                 href = '/'
