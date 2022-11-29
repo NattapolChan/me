@@ -3,7 +3,10 @@ import { Text, VStack } from '@chakra-ui/react'
 
 export default function Description(){
     return(
-    <VStack direction={'column'} m='auto'spacing={'20px'} maxW={'3xl'} color={'gray.400'} textAlign='justify'>
+    <VStack direction={'column'} m='auto' spacing='20px' 
+            maxW='3xl' color={'gray.400'} textAlign='justify'
+            pb='3em' overflowY='hidden'
+    >
         <Text fontSize='4xl' as='b'>Chanpaisit Nattapol</Text>
         <Text fontSize='xl' as='b'>
             I'm Chan, Math & ML enthusiast. <br/> Ex-Full time Physics tutor.

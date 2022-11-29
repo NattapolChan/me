@@ -8,8 +8,10 @@ const About = () => {
   return (
     <>
         <Navbar />
-        <Box  w='100vw'>
-            <Center display='block' w='100vw' p='8' minH='100vh' bgColor={color_scheme[1]}>
+        <Box  w='full'>
+            <Center display='block' w='full' 
+                    p='16' minH='90vh' bgColor={color_scheme[1]}
+                    > 
                 <Description />
             </Center>
             <Contact />
