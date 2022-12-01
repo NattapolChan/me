@@ -9,7 +9,7 @@ export default function Description(){
     >
         <Text fontSize='4xl' as='b'>Chanpaisit Nattapol</Text>
         <Text fontSize='xl' as='b'>
-            I'm Chan, Math & ML enthusiast. <br/> Ex-Full time Physics tutor.
+            I'm Chan. <br/> Ex-Full time Physics tutor.
         </Text>
         <Text fontSize="lg">
             I'm a Freshman Undergraduate in Electrical and Electronics Engineering at 

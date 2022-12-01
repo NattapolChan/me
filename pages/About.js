@@ -10,7 +10,7 @@ const About = () => {
         <Box  w='full' overflowY='hidden'>
             <Navbar />
             <Center display='block' w='full' 
-                    p='16' minH='90vh' bgColor={color_scheme[1]}
+                    p='12' minH='90vh' bgColor={color_scheme[1]}
             > 
                 <Description />
             </Center>
