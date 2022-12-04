@@ -1,16 +1,16 @@
 import * as React from 'react'
-import { Text, VStack } from '@chakra-ui/react'
+import { Text, VStack, Center } from '@chakra-ui/react'
 
 export default function Description(){
     return(
     <VStack direction={'column'} m='auto' spacing='20px' 
-            maxW='3xl' color={'gray.400'} textAlign='justify'
+            maxW='3xl' color={'gray.400'} textAlign= {{base: 'left', sm: 'justify'}}
             pb='3em' overflowY='hidden'
     >
         <Text fontSize='4xl' as='b'>Chanpaisit Nattapol</Text>
-        <Text fontSize='xl' as='b'>
-            I'm Chan. <br/> Ex-Full time Physics tutor.
-        </Text>
+            <Text fontSize='xl' as='b' textAlign='center'>
+                I'm Chan. <br/> Ex-Full time Physics tutor.
+            </Text>
         <Text fontSize="lg">
             I'm a Freshman Undergraduate in Electrical and Electronics Engineering at 
             Nanyang Technological University, Singapore. I studied at Kamnoetvidya Science Academy, Thailand, 

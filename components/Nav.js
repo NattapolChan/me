@@ -40,7 +40,7 @@ export default function Navbar() {
         zIndex='10' bgColor={color_scheme[1]} overflow='hidden'>
             <Center w={"50%"} bg={'transparent'} zIndex='10'>
                 <ChakraNextLink 
-                href = '/'
+                href = ''
                   textAlign= {'center'}
                   fontFamily={'heading'}
                   color={'gray.400'}
@@ -67,7 +67,7 @@ export default function Navbar() {
               bg={color_scheme[1]}>
           <Center bg={'transparent'} zIndex='10'>
             <ChakraNextLink textAlign= {'center'}
-              href='/'
+              href=''
               fontFamily={'heading'}
               color={'gray.400'}
               bg={color_scheme[1]}
@@ -117,40 +117,55 @@ export default function Navbar() {
           color={linkColor}
           zIndex='10'
         >
-        <Popover trigger={'hover'} placement={'bottom-start'}>
-          <PopoverTrigger>
-                <ChakraNextLink fontSize={'xl'}
-                href={navItem.href ?? '#'}
-                fontWeight={600}
+        {navItem.children&&
+          <Popover trigger={'hover'} placement={'bottom-start'}>
+            <PopoverTrigger>
+                  <ChakraLink fontSize={'xl'}
+                  fontWeight={600}
+                  _hover={{
+                    textDecoration: 'none'
+                  }}
+                  p={2}
+                  >
+                {navItem.label}
+                </ChakraLink>
+            </PopoverTrigger>
+            {navItem.children && (
+              <PopoverContent
+                border={0}
+                boxShadow={'xl'}
+                bg={popoverContentBgColor}
+                rounded='0px'
+                p={4}
+                minW={'sm'}
                 _hover={{
-                  textDecoration: 'none'
+                  borderWidth: '2px',
+                  borderColor: 'white',
                 }}
-                p={2}
-                >
-              {navItem.label}
-              </ChakraNextLink>
-          </PopoverTrigger>
-          {navItem.children && (
-            <PopoverContent
-              border={0}
-              boxShadow={'xl'}
-              bg={popoverContentBgColor}
-              rounded='0px'
-              p={4}
-              minW={'sm'}
-              _hover={{
-                borderWidth: '2px',
-                borderColor: 'white',
-              }}
-            >
-              <Stack zIndex='10'>
-                {navItem.children.map((child) => (
-                  <SubNav key={child.label} {...child} />
-                ))}
-              </Stack>
-            </PopoverContent>
-          )}
-        </Popover>
+              >
+                <Stack zIndex='10'>
+                  {navItem.children.map((child) => (
+                    <SubNav key={child.label} {...child} />
+                  ))}
+                </Stack>
+              </PopoverContent>
+            )}
+        </Popover>}
+        {
+        !navItem.children && <ChakraNextLink
+                                p={2}
+                                fontSize={'xl'}
+                                fontWeight={800}
+                                _hover={{
+                                  textDecoration: 'none'
+                                }}
+                                href={navItem.href ?? '#'}
+                                zIndex='10'
+                                >
+                                {navItem.label}
+                                
+                            </ChakraNextLink>
+        }
       </Center>
       ))}
       </>
@@ -182,42 +197,59 @@ export default function Navbar() {
                 color={linkColor}
                 zIndex='10'
             >
-              <Popover trigger={'hover'} placement={'bottom-start'} zIndex='10'>
-                <PopoverTrigger>
-                <ChakraNextLink
-                  p={2}
-                  fontSize={'xl'}
-                  fontWeight={800}
-                  _hover={{
-                    textDecoration: 'none'
-                  }}
-                  href={navItem.href ?? '#'}
-                  zIndex='10'
+              {
+                navItem.children && 
+                <Popover trigger={'hover'} placement={'bottom-start'} zIndex='10'>
+                  <PopoverTrigger>
+                  <ChakraLink
+                    p={2}
+                    fontSize={'xl'}
+                    fontWeight={800}
+                    _hover={{
+                      textDecoration: 'none'
+                    }}
+                    zIndex='10'
+                    >
+                    {navItem.label}
+                    </ChakraLink>
+                  </PopoverTrigger>
+                  {navItem.children && (
+                    <PopoverContent
+                    border={0}
+                    boxShadow={'xl'}
+                    bg={popoverContentBgColor}
+                    rounded='0px'
+                    p={4}
+                    minW={'sm'}
+                    _hover={{
+                      borderWidth: '2px',
+                      borderColor: 'white',
+                    }}
                   >
-                  {navItem.label}
-                  </ChakraNextLink>
-                </PopoverTrigger>
-                {navItem.children && (
-                  <PopoverContent
-                  border={0}
-                  boxShadow={'xl'}
-                  bg={popoverContentBgColor}
-                  rounded='0px'
-                  p={4}
-                  minW={'sm'}
-                  _hover={{
-                    borderWidth: '2px',
-                    borderColor: 'white',
-                  }}
-                >
-                  <Stack zIndex='10'>
-                    {navItem.children.map((child) => (
-                      <SubNav key={child.label} {...child} />
-                    ))}
-                  </Stack>
-                </PopoverContent>
-                )}
-              </Popover>
+                    <Stack zIndex='10'>
+                      {navItem.children.map((child) => (
+                        <SubNav key={child.label} {...child} />
+                      ))}
+                    </Stack>
+                  </PopoverContent>
+                  )}
+                </Popover>
+              }
+              {!navItem.children && 
+                <ChakraNextLink
+                    p={2}
+                    fontSize={'xl'}
+                    fontWeight={800}
+                    _hover={{
+                      textDecoration: 'none'
+                    }}
+                    href={navItem.href ?? '#'}
+                    zIndex='10'
+                    >
+                    {navItem.label}
+                    
+                </ChakraNextLink>
+              }
             </Box>
           ))}
         </Flex>
@@ -229,7 +261,7 @@ export default function Navbar() {
     const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
     return (
         <ChakraNextLink role={'group'}
-        href={href ?? '#'}
+        href={href ?? ''}
         display={'block'}
         p={2}
         _hover={{ 
