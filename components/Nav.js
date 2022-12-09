@@ -40,7 +40,7 @@ export default function Navbar() {
         zIndex='10' bgColor={color_scheme[1]} overflow='hidden'>
             <Center w={"50%"} bg={'transparent'} zIndex='10'>
                 <ChakraNextLink 
-                href = ''
+                href = '/'
                   textAlign= {'center'}
                   fontFamily={'heading'}
                   color={'gray.400'}
@@ -67,7 +67,7 @@ export default function Navbar() {
               bg={color_scheme[1]}>
           <Center bg={'transparent'} zIndex='10'>
             <ChakraNextLink textAlign= {'center'}
-              href=''
+              href='/'
               fontFamily={'heading'}
               color={'gray.400'}
               bg={color_scheme[1]}
