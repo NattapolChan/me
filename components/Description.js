@@ -24,7 +24,7 @@ export default function Description(){
         </Text>
         <Text fontSize='lg'>
             Besides, I also won <Text as='kbd' color={'#3BBA9C'}>Silver medal</Text> in <Text as='kbd' color={'#3BBA9C'}>52nd International Physics Olympid </Text>
-            in 2022 at Switzerland. I am also a Physics Tutor for Physics Olympiad Preparation, with my students obtaining 
+            in 2022 at Switzerland. I am also a Physics Tutor for Physics Olympiad Preparation, which my students obtained 
             2 Gold medals, 2 Silver medals & a Bronze medal in Thailand Physics Olympiad. Throughout my journey in Physics Olympiad, 
             Physics has equipped me with strong 
             numerical method, data analytics & calculus background.
