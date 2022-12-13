@@ -7,7 +7,7 @@ export default function Description(){
             maxW='3xl' color={'gray.400'} textAlign= {{base: 'left', sm: 'justify'}}
             pb='3em' overflowY='hidden'
     >
-        <Text fontSize='4xl' as='b'>Chanpaisit Nattapol</Text>
+        <Text fontSize='2xl' as='b'>Chanpaisit Nattapol</Text>
             <Text fontSize='xl' as='b' textAlign='center'>
                 I'm Chan. <br/> Ex-Full time Physics tutor.
             </Text>
