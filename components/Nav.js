@@ -169,7 +169,7 @@ export default function Navbar() {
         }
         {
           !navItem.children && navItem.a && <a
-              href="/assets/Chanpaisit_Resume.pdf"
+              href="/me/assets/Chanpaisit_Resume.pdf"
               alt="alt text"
               target="_blank"
               rel="noopener noreferrer"
@@ -262,7 +262,7 @@ export default function Navbar() {
               }
               {!navItem.children && navItem.a && 
                 <a
-                href="/assets/Chanpaisit_Resume.pdf"
+                href="/me/assets/Chanpaisit_Resume.pdf"
                 alt="alt text"
                 target="_blank"
                 rel="noopener noreferrer"
