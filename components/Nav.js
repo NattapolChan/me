@@ -37,7 +37,7 @@ export default function Navbar() {
     return (
       <>
         <Flex maxWidth="100%" pt={'70px'} display={{base: 'none', xl: 'flex'}} 
-        zIndex='10' bgColor={color_scheme[1]} overflow='hidden'>
+        zIndex='10' bgColor={color_scheme[1]}>
             <Center w={"50%"} bg={'transparent'} zIndex='10'>
                 <ChakraNextLink 
                 href = '/'
@@ -152,19 +152,28 @@ export default function Navbar() {
             )}
         </Popover>}
         {
-        !navItem.children && <ChakraNextLink
+        !navItem.children && navItem.href && <ChakraNextLink
                                 p={2}
                                 fontSize={'xl'}
-                                fontWeight={800}
+                                fontWeight={600}
                                 _hover={{
                                   textDecoration: 'none'
                                 }}
-                                href={navItem.href ?? '#'}
+                                href={navItem.href ?? navItem.a ?? '#'}
                                 zIndex='10'
                                 >
                                 {navItem.label}
                                 
                             </ChakraNextLink>
+        }
+        {
+          !navItem.children && navItem.a && <a
+              href="/asserts/Chanpaisit_Resume.pdf"
+              alt="alt text"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{fontWeight: "600", fontSize: "20px", height: "2.3em", paddingTop: "08px"}}
+            >Resume</a>
         }
       </Center>
       ))}
@@ -235,7 +244,7 @@ export default function Navbar() {
                   )}
                 </Popover>
               }
-              {!navItem.children && 
+              {!navItem.children && navItem.href && 
                 <ChakraNextLink
                     p={2}
                     fontSize={'xl'}
@@ -243,13 +252,22 @@ export default function Navbar() {
                     _hover={{
                       textDecoration: 'none'
                     }}
-                    href={navItem.href ?? '#'}
+                    href={navItem.href ?? navItem.a ?? '#'}
                     zIndex='10'
                     >
                     {navItem.label}
                     
                 </ChakraNextLink>
               }
+              {!navItem.children && navItem.a && 
+                <a
+                href="/assets/Chanpaisit_Resume.pdf"
+                alt="alt text"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{fontWeight: "800", fontSize: "20px"}}
+                >Resume</a>
+                }
             </Box>
           ))}
         </Flex>

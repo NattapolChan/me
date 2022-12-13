@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.12",
-    "@chakra-ui/react": "^2.4.1",
+    "@chakra-ui/react": "^2.4.3",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@react-three/fiber": "^8.9.1",
@@ -21,7 +21,9 @@
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "three": "^0.146.0"
+    "react-pdf": "^6.2.0",
+    "three": "^0.146.0",
+    "webpack": "^5.75.0"
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
