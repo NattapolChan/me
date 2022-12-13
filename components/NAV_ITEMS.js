@@ -5,7 +5,7 @@ const NAV_ITEMS = [
       children: [
         {
           label: 'Parallel Curves Detection Method based on Hough Transform',
-          subLabel: 'see page 135',
+          subLabel: 'see page 128',
           href: 'https://www.math.science.cmu.ac.th/tjcdcggg/Book-abstract.pdf#page=135',
         },
         {
