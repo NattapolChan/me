@@ -58,13 +58,14 @@ export default function Navbar() {
             </Box>
         </Flex>
         <VStack display={{base:'block', xl: 'none'}} 
-              position='relative'
+              position='absolute'
               align={'center'}
               minW={'14em'}
               m='auto'
               zIndex='10'
               h='10vh'
-              bg={color_scheme[1]}>
+              bg={color_scheme[1]}
+              >
           <Center bg={'transparent'} zIndex='10'>
             <ChakraNextLink textAlign= {'center'}
               href='/'
@@ -168,7 +169,7 @@ export default function Navbar() {
         }
         {
           !navItem.children && navItem.a && <a
-              href="/asserts/Chanpaisit_Resume.pdf"
+              href="/assets/Chanpaisit_Resume.pdf"
               alt="alt text"
               target="_blank"
               rel="noopener noreferrer"
