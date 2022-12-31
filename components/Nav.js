@@ -262,7 +262,7 @@ export default function Navbar() {
               }
               {!navItem.children && navItem.a && 
                 <a
-                href="/me/assets/Chanpaisit_Resume.pdf"
+                href="/me/assets/Chanpaisit_Nattapol_Resume.pdf"
                 alt="alt text"
                 target="_blank"
                 rel="noopener noreferrer"
