@@ -12,7 +12,7 @@ export default function Description(){
                 I'm Chan. <br/> Ex-Full time Physics tutor.
             </Text>
         <Text fontSize="lg">
-            I'm a Freshman Undergraduate in Electrical and Electronics Engineering at 
+            I'm a Freshman Undergraduate majoring in Computer Engineering at 
             Nanyang Technological University, Singapore. I studied at Kamnoetvidya Science Academy, Thailand, 
             for High School.
         </Text>
