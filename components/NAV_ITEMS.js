@@ -35,7 +35,7 @@ const NAV_ITEMS = [
       // href: 'https://docs.google.com/document/d/1GJzsIIE7Eez76El0f2XoZvN4Wolvu9-fxL5yCWRA200/edit?usp=sharing',
       // href: '/Resume',
       // href: '/Chanpaisit_Resume.pdf'
-      a: '/assets/Chanpaisit_Nattapol_Resume.pdf'
+      a: '/me/assets/Chanpaisit_Nattapol_Resume.pdf'
     },
     {
       label: 'About',
