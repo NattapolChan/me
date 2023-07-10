@@ -3,15 +3,19 @@ const NAV_ITEMS = [
       label: 'Research',
       // href: '/Research',
       children: [
+	{
+		label: 'Eye Gaze Estimation',
+		sublabel: 'MLDA Industrial Project',
+		href: 'https://github.com/LeeXuanHua/Eyegaze-Estimation',
+	},
         {
-          label: 'Parallel Curves Detection Method based on Hough Transform',
-          subLabel: 'see page 128',
-          href: 'https://www.math.science.cmu.ac.th/tjcdcggg/Book-abstract.pdf#page=135',
+		label: 'Parallel Curves Detection Method based on Hough Transform',
+		subLabel: 'see page 128',
+		href: 'https://www.math.science.cmu.ac.th/tjcdcggg/Book-abstract.pdf#page=135',
         },
         {
-          label: 'Deeply Supervised CNN with Attention Mechanism',
-          subLabel: 'High school graduation project',
-
+		label: 'Deeply Supervised CNN with Attention Mechanism',
+		subLabel: 'High school graduation project',
         },
       ],
     },
@@ -19,14 +23,14 @@ const NAV_ITEMS = [
       label: 'Project',
       children: [
         {
-          label: 'SaraTree',
-          subLabel: 'A submission to HACKVCIS hackathon',
-          href: 'https://saratree.vercel.app/'
+		label: 'SaraTree',
+		subLabel: 'A submission to HACKVCIS hackathon',
+		href: 'https://saratree.vercel.app/'
         },
         {
-          label: 'Guitar Tab Generator',
-          subLabel: 'A website to generate guitar tab from .wav file',
-          href: 'https://nattapolguitartab.netlify.app/'
+		label: 'Guitar Tab Generator',
+		subLabel: 'A website to generate guitar tab from .wav file',
+		href: 'https://nattapolguitartab.netlify.app/'
         },
       ]
     },
