@@ -20,6 +20,7 @@ import { Link as ChakraLink} from "@chakra-ui/react"
 import React from "react";
 import NAV_ITEMS from './NAV_ITEMS';
 
+const color_theme = ['#F5EFE7','#D8C4B6','#4F709C', '#213555']
 
 const ChakraNextLink = React.forwardRef(({ href, children, ...props }, ref) => {
   return (
@@ -33,21 +34,20 @@ const ChakraNextLink = React.forwardRef(({ href, children, ...props }, ref) => {
 
 
 export default function Navbar() {
-    const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
     return (
       <>
         <Flex maxWidth="100%" pt={'70px'} display={{base: 'none', xl: 'flex'}} 
-        zIndex='10' bgColor={color_scheme[1]}>
+        zIndex='10' bgColor={color_theme[0]}>
             <Center w={"50%"} bg={'transparent'} zIndex='10'>
                 <ChakraNextLink 
                 href = '/'
                   textAlign= {'center'}
                   fontFamily={'heading'}
-                  color={'gray.400'}
+                  color={color_theme[3]}
                   fontSize='1.6em'
                   fontWeight={800}
                   className='hide'
-                  _hover={{textDecoration:'none', color: color_scheme[0]}}
+                  _hover={{textDecoration:'none', color: 'gray.900'}}
                   zIndex='10'
                 >
                   NC
@@ -64,21 +64,21 @@ export default function Navbar() {
               m='auto'
               zIndex='10'
               h='10vh'
-              bg={color_scheme[1]}
+              bg={color_theme[1]}
               >
           <Center bg={'transparent'} zIndex='10'>
             <ChakraNextLink textAlign= {'center'}
               href='/'
               fontFamily={'heading'}
               color={'gray.400'}
-              bg={color_scheme[1]}
+              bg={color_theme[0]}
               pt='0.1em'
               pb='0.1em'
               fontSize='1.6em'
               fontWeight={800}
               className='hide'
               width={'100%'}
-              _hover={{textDecoration:'none', color: color_scheme[0]}}
+              _hover={{textDecoration:'none', color: 'gray.900'}}
               >
                 NC
               </ChakraNextLink>
@@ -95,10 +95,9 @@ export default function Navbar() {
 
 
   const MobileNav = () => {
-    const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
-    const linkColor = color_scheme[4];
-    const linkHoverColor = color_scheme[0];
-    const popoverContentBgColor = color_scheme[1];
+    const linkColor = color_theme[3];
+    const linkHoverColor = color_theme[0];
+    const popoverContentBgColor = color_theme[0];
     return(
       <>
       {NAV_ITEMS.map((navItem)=>(
@@ -114,7 +113,7 @@ export default function Navbar() {
             borderColor: linkHoverColor,
             color: linkHoverColor
           }}
-          bgColor={color_scheme[1]}
+          bgColor={color_theme[0]}
           color={linkColor}
           zIndex='10'
         >
@@ -183,10 +182,9 @@ export default function Navbar() {
   }
 
   const DesktopNav = () => {
-    const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
-    const linkColor = color_scheme[4];
-    const linkHoverColor = color_scheme[0];
-    const popoverContentBgColor = color_scheme[1];
+    const linkColor = color_theme[3];
+    const linkHoverColor = color_theme[2];
+    const popoverContentBgColor = color_theme[0];
     return (
       <Stack direction={'row'} spacing={4} zIndex='10'>
         <Flex justifyContent={"flex-end"} gap = {6} zIndex='10'>
@@ -198,12 +196,12 @@ export default function Navbar() {
                 pt={'5px'}
                 pb={'5px'}
                 borderWidth={'1px'}
-                borderColor={color_scheme[4]}
+                borderColor={color_theme[3]}
                 _hover={{
                   borderColor: linkHoverColor,
                   color: linkHoverColor
                 }}
-                bgColor={color_scheme[1]}
+                bgColor={color_theme[0]}
                 color={linkColor}
                 zIndex='10'
             >
@@ -277,7 +275,6 @@ export default function Navbar() {
   };
   
   const SubNav = ({ label, href, subLabel }) => {
-    const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
     return (
         <ChakraNextLink role={'group'}
         href={href ?? ''}
@@ -290,8 +287,8 @@ export default function Navbar() {
       >
         <Stack direction={'row'} align={'center'} zIndex='10'>
           <Box 
-              color= {'gray.400'}
-              _groupHover={{ color: color_scheme[0] }}
+              color= {color_theme[3]}
+              _groupHover={{ color: color_theme[2] }}
               transition={'all .3s ease'}
           >
             <Text
@@ -308,7 +305,7 @@ export default function Navbar() {
             justify={'flex-end'}
             align={'center'}
             flex={1}>
-            <Icon color={color_scheme[0]} w={5} h={5} as={ href ? (href[0]=='h' ? LinkIcon : ArrowRightIcon) : NotAllowedIcon}/>
+            <Icon color={color_theme[0]} w={5} h={5} as={ href ? (href[0]=='h' ? LinkIcon : ArrowRightIcon) : NotAllowedIcon}/>
           </Flex>
         </Stack>
         </ChakraNextLink>

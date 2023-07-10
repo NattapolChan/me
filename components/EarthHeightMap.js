@@ -11,7 +11,7 @@ import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 
 extend({ TextGeometry })
 
-const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','#707793', '#89a0e0']
+const color_scheme=['#F5EFE7','#D8C4B6','#D8C4B6','#4F709C','#4F709C', '#213555']
 CameraControls.install({ THREE })
 
 function Threejs() {
@@ -162,7 +162,7 @@ const MultipleAchievement = () => {
         <group>
           <mesh position={[-2.0 +array.location[0]/10, 2.1+array.location[2], -7.7 + 12 - array.location[1]/10]} rotation={[0,Math.PI/2,0]}>
             <textGeometry args={[array.name, {font, size:0.2, height: 0.1}]}/>
-            <meshLambertMaterial attach='material' color={color_scheme[0]}/>
+            <meshLambertMaterial attach='material' color={color_scheme[1]}/>
           </mesh>
           {array.description && <mesh position={[-2.0 +array.location[0]/10, 1.95+array.location[2], -7.7 + 12 - array.location[1]/10]} rotation={[0,Math.PI/2,0]}>
             <textGeometry args={[array.description, {font, size: 0.1, height: 0.1}]}/>
@@ -206,7 +206,7 @@ const Point = (props) => {
   )
 }
 
-const achievement = 
+let achievement = 
   [
     {
       location: [10,40, 0],
@@ -241,3 +241,4 @@ const achievement =
       year: '2019 - 2022',
     },
   ]
+achievement = []

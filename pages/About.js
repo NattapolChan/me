@@ -4,13 +4,13 @@ import Contact from "/components/Contact";
 import Navbar from "/components/Nav";
 
 const About = () => {
-  const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
+	const color_theme = ['#F5EFE7','#D8C4B6','#4F709C', '#213555']
   return (
     <>
         <Box  w='full' overflowY='hidden' bg= "#2E3047">
             <Navbar />
             <Center display='block' w='full' 
-                    p='8' minH='90vh' bgColor={color_scheme[1]}
+                    p='8' minH='90vh' bgColor={color_theme[0]}
                     mt={{base: "24", xl: "0"}}
             > 
                 <Description />

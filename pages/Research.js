@@ -4,10 +4,11 @@ import Link from "next/link";
 import NAV_ITEMS from '/components/NAV_ITEMS'
 
 const SubNav = ({ label, href, subLabel }) => {
-    const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
-    const linkColor = color_scheme[4];
-    const linkHoverColor = color_scheme[0];
-    const popoverContentBgColor = color_scheme[1];    
+
+	const color_theme = ['#F5EFE7','#D8C4B6','#4F709C', '#213555']
+    const linkColor = color_theme[3];
+    const linkHoverColor = color_theme[0];
+    const popoverContentBgColor = color_theme[0];    
     return (
         <Link href={href ? href :'#'}>
             <Box 
@@ -19,12 +20,12 @@ const SubNav = ({ label, href, subLabel }) => {
                 pb={'25px'}
                 textAlign='center'
                 borderWidth={'1px'}
-                borderColor={color_scheme[0]}
+                borderColor={color_theme[0]}
                 _hover={{
                   borderColor: linkHoverColor,
                   color: linkHoverColor
                 }}
-                bgColor={color_scheme[2]}
+                bgColor={color_theme[2]}
                 color={linkColor}
                 zIndex='10'
             >
@@ -35,9 +36,6 @@ const SubNav = ({ label, href, subLabel }) => {
   };
 
 export default function Research(){
-    const color_scheme=['#3BBA9C','#2E3047','#43455C','#3C3F58','gray.400']
-    console.log("hi")
-    console.log(NAV_ITEMS[0].children)
     return (
         <VStack w='100vw' h='100vh' bg='#2E3047' justifyContent='center' alignItems='center'>
             {NAV_ITEMS[0].children.map((child) => (
