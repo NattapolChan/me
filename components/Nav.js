@@ -64,13 +64,13 @@ export default function Navbar() {
               m='auto'
               zIndex='10'
               h='10vh'
-              bg={color_theme[1]}
+              bg={color_theme[0]}
               >
           <Center bg={'transparent'} zIndex='10'>
             <ChakraNextLink textAlign= {'center'}
               href='/'
               fontFamily={'heading'}
-              color={'gray.400'}
+              color={color_theme[3]}
               bg={color_theme[0]}
               pt='0.1em'
               pb='0.1em'
@@ -78,13 +78,13 @@ export default function Navbar() {
               fontWeight={800}
               className='hide'
               width={'100%'}
-              _hover={{textDecoration:'none', color: 'gray.900'}}
+              _hover={{textDecoration:'none', color: color_theme[2]}}
               >
                 NC
               </ChakraNextLink>
           </Center>
-          <Flex h='70vh' align={'flex-start'}
-                direction={'row'} spacing='5vh' justify={'space-evenly'} minW='14em'
+          <Flex h='100vh' align={'flex-start'}
+                direction={'row'} justify={'space-evenly'} minW='14em'
                 zIndex='10' w='100vw' overflow='hidden'>
             <MobileNav />
           </Flex>
@@ -96,7 +96,7 @@ export default function Navbar() {
 
   const MobileNav = () => {
     const linkColor = color_theme[3];
-    const linkHoverColor = color_theme[0];
+    const linkHoverColor = color_theme[2];
     const popoverContentBgColor = color_theme[0];
     return(
       <>
@@ -108,12 +108,13 @@ export default function Navbar() {
           pr={'2px'}
           pt={'0px'}
           pb={'0px'}
-          borderWidth={'1px'}
+          borderWidth={'1.5px'}
           _hover={{
             borderColor: linkHoverColor,
             color: linkHoverColor
           }}
           bgColor={color_theme[0]}
+	  borderColor={linkColor}
           color={linkColor}
           zIndex='10'
         >

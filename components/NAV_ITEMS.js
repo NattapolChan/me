@@ -24,7 +24,7 @@ const NAV_ITEMS = [
       children: [
         {
 		label: 'SaraTree',
-		subLabel: 'A submission to HACKVCIS hackathon',
+		subLabel: 'HACKVCIS hackathon',
 		href: 'https://saratree.vercel.app/'
         },
         {
@@ -32,6 +32,11 @@ const NAV_ITEMS = [
 		subLabel: 'A website to generate guitar tab from .wav file',
 		href: 'https://nattapolguitartab.netlify.app/'
         },
+	{
+		label: 'MyNinja: personalized dashboard for consignee',
+	        sublabel: 'Ninjavan Code Dojo hackathon',
+		href: 'https://github.com/mcbebu/ALTER-TABLE',
+	}
       ]
     },
     {

@@ -7,7 +7,7 @@ const About = () => {
 	const color_theme = ['#F5EFE7','#D8C4B6','#4F709C', '#213555']
   return (
     <>
-        <Box  w='full' overflowY='hidden' bg= "#2E3047">
+        <Box  w='full' overflowY='hidden' bg={color_theme[0]}>
             <Navbar />
             <Center display='block' w='full' 
                     p='8' minH='90vh' bgColor={color_theme[0]}
