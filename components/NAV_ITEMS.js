@@ -5,12 +5,12 @@ const NAV_ITEMS = [
       children: [
 	{
 		label: 'Eye Gaze Estimation',
-		sublabel: 'MLDA Industrial Project',
+		subLabel: 'MLDA Industrial Project with Black Sesame Technologies, Singapore',
 		href: 'https://github.com/LeeXuanHua/Eyegaze-Estimation',
 	},
         {
 		label: 'Parallel Curves Detection Method based on Hough Transform',
-		subLabel: 'see page 128',
+		subLabel: 'Presented in 23rd TJCDCG3 conference, see page 128',
 		href: 'https://www.math.science.cmu.ac.th/tjcdcggg/Book-abstract.pdf#page=135',
         },
         {
@@ -34,9 +34,14 @@ const NAV_ITEMS = [
         },
 	{
 		label: 'MyNinja: personalized dashboard for consignee',
-	        sublabel: 'Ninjavan Code Dojo hackathon',
+	        subLabel: 'Ninjavan Code Dojo hackathon',
 		href: 'https://github.com/mcbebu/ALTER-TABLE',
-	}
+	},
+	{
+		label: 'Others - school works, implementations (unofficial) of research paper, etc.',
+		subLabel: 'see GitHub Profile',
+		href: 'https://github.com/NattapolChan',
+	},
       ]
     },
     {
