@@ -4,6 +4,11 @@ const NAV_ITEMS = [
       // href: '/Research',
       children: [
 	{
+		label: 'VBench',
+		subLabel: 'Contributed to a paper, VBench: Video generative model benchmark',
+		href: 'https://github.com/Vchitect/VBench',
+	},
+	{
 		label: 'Eye Gaze Estimation',
 		subLabel: 'MLDA Industrial Project with Black Sesame Technologies, Singapore',
 		href: 'https://github.com/LeeXuanHua/Eyegaze-Estimation',
@@ -13,12 +18,10 @@ const NAV_ITEMS = [
 		subLabel: 'Presented in 23rd TJCDCG3 conference, see page 128',
 		href: 'https://www.math.science.cmu.ac.th/tjcdcggg/Book-abstract.pdf#page=135',
         },
-	/*
         {
-		label: 'Deeply Supervised CNN with Attention Mechanism',
+		label: 'Deeply Supervised CNN with Convolution Block Attention UNet',
 		subLabel: 'High school graduation project',
         },
-	*/
       ],
     },
     {

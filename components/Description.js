@@ -20,8 +20,8 @@ export default function Description(){
             Nanyang Technological University, Singapore. I have deep passion for AI and High Performance Computing.
 	</Text>
 	<Text fontSize="lg">
-	    I have done research and projects in Computer Vision, NLP, and mathematical-based pattern recognition. Apart from AI research, I am a member in High Performance Computing Club, NTU, and was a Tech Director for Thai Student Society, Singapore, where I build a fullstack webapp to connect Thai undergrads in Singapore. Outside of academic, I enjoy playing basketball, guitar, and Rubik's cube. I also regularly participate in Hackathon and HPC or AI-related competition.
-        </Text>
+	    I have done research and projects in Computer Vision, NLP, and mathematical-based pattern recognition. Apart from AI research, I am a member in High Performance Computing Club, NTU, and was a Tech Director for Thai Student Society, Singapore, where I build a fullstack webapp to connect Thai undergrads in Singapore. </Text>
+        <Text fontSize="lg">Outside of academic, I enjoy playing basketball, guitar, and Rubik's cube. I regularly participate in Hackathon and HPC or AI-related competition.</Text>
 	</VStack>
     </Center>
     )
