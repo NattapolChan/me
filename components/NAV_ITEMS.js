@@ -18,10 +18,6 @@ const NAV_ITEMS = [
 		subLabel: 'Presented in 23rd TJCDCG3 conference, see page 128',
 		href: 'https://www.math.science.cmu.ac.th/tjcdcggg/Book-abstract.pdf#page=135',
         },
-        {
-		label: 'Deeply Supervised CNN with Convolution Block Attention UNet',
-		subLabel: 'High school graduation project',
-        },
       ],
     },
     {
