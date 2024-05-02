@@ -50,12 +50,12 @@ const NAV_ITEMS = [
       ]
     },
     {
-      label: 'Resume',
+      label: 'CV/Resume',
       // href: 'https://docs.google.com/document/d/1GJzsIIE7Eez76El0f2XoZvN4Wolvu9-fxL5yCWRA200/edit?usp=sharing',
       // href: '/Resume',
       // href: '/Chanpaisit_Resume.pdf'
       // a: '/me/assets/Chanpaisit_Nattapol_Resume.pdf',
-	a: '/me/assets/Chanpaisit_Resume-July-2023.pdf'
+	a: '/me/assets/CV-May-2024.pdf'
     },
     {
       label: 'About',
