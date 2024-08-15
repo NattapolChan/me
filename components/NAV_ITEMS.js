@@ -51,7 +51,7 @@ const NAV_ITEMS = [
       // href: '/Resume',
       // href: '/Chanpaisit_Resume.pdf'
       // a: '/me/assets/Chanpaisit_Nattapol_Resume.pdf',
-	a: '/me/assets/CV-May-2024.pdf'
+	a: '/me/assets/2024-08-16.pdf',
     },
     {
       label: 'About',
