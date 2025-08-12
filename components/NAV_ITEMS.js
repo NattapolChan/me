@@ -8,11 +8,6 @@ const NAV_ITEMS = [
 		subLabel: 'Contributed to a paper, VBench: Video generative model benchmark',
 		href: 'https://github.com/Vchitect/VBench',
 	},
-	{
-		label: 'Eye Gaze Estimation',
-		subLabel: 'MLDA Industrial Project with Black Sesame Technologies, Singapore',
-		href: 'https://github.com/LeeXuanHua/Eyegaze-Estimation',
-	},
         {
 		label: 'Parallel Curves Detection Method based on Hough Transform',
 		subLabel: 'Presented in 23rd TJCDCG3 conference, see page 128',
@@ -24,22 +19,17 @@ const NAV_ITEMS = [
       label: 'Project',
       children: [
         {
-		label: 'SaraTree',
-		subLabel: 'HACKVCIS hackathon',
-		href: 'https://saratree.vercel.app/'
-        },
-        {
-		label: 'Guitar Tab Generator',
-		subLabel: 'A website to generate guitar tab from .wav file',
-		href: 'https://nattapolguitartab.netlify.app/'
+		label: 'SCDS PYPHub',
+		subLabel: 'Past Exams Paper Discussion site for NTU CCDS',
+		href: 'https://pyphub.ntuscds.com/'
         },
 	{
-		label: 'MyNinja: personalized dashboard for consignee',
-	        subLabel: 'Ninjavan Code Dojo hackathon',
-		href: 'https://github.com/mcbebu/ALTER-TABLE',
+		label: 'Eye Gaze Estimation',
+		subLabel: 'MLDA Industrial Project with Black Sesame Technologies, Singapore',
+		href: 'https://github.com/LeeXuanHua/Eyegaze-Estimation',
 	},
 	{
-		label: 'Others - school works, implementations (unofficial) of research paper, etc.',
+		label: 'Others',
 		subLabel: 'see GitHub Profile',
 		href: 'https://github.com/NattapolChan',
 	},
@@ -54,8 +44,8 @@ const NAV_ITEMS = [
 	a: '/me/assets/2024-08-16.pdf',
     },
     {
-      label: 'About',
-      href: '/About',
+      label: 'Blogs',
+      href: '/Blog',
     },
   ];
 
