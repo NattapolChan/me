@@ -23,16 +23,11 @@ const NAV_ITEMS = [
 		subLabel: 'Past Exams Paper Discussion site for NTU CCDS',
 		href: 'https://pyphub.ntuscds.com/'
         },
-	{
-		label: 'Eye Gaze Estimation',
-		subLabel: 'MLDA Industrial Project with Black Sesame Technologies, Singapore',
-		href: 'https://github.com/LeeXuanHua/Eyegaze-Estimation',
-	},
-	{
-		label: 'Others',
-		subLabel: 'see GitHub Profile',
-		href: 'https://github.com/NattapolChan',
-	},
+        {
+            label: 'Others',
+            subLabel: 'see GitHub Profile',
+            href: 'https://github.com/NattapolChan',
+        },
       ]
     },
     {
