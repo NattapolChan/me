@@ -27,6 +27,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <script 
+          defer 
+          src="https://cloud.umami.is/script.js" 
+          data-website-id="37d01629-c9ea-4592-b70e-216870c0523f"
+          strategy="afterInteractive"
+        />
         <meta name="robots" content="noindex" />
         <link rel="icon" href="/favicon.ico" />
       </head>
