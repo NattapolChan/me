@@ -1,4 +1,11 @@
+import { JetBrains_Mono } from 'next/font/google';
 import './globals.css'
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'Nattapol Chanpaisit',
@@ -23,7 +30,7 @@ export default function RootLayout({ children }) {
         <meta name="robots" content="noindex" />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body>{children}</body>
+      <body className={jetbrainsMono.className}>{children}</body>
     </html>
   )
 }
