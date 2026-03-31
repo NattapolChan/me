@@ -170,9 +170,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="text-xl">
+        <div className="flex flex-col text-xl gap-2">
           About
-          <div className="text-sm">I&apos;m a final year undergraduate student at Nanyang Technological University. My final year research project on Discrete-event Simulation on GPU is advised by Prof. Cai Wentong. I am a member of Supercomputing team at NTU <a href="https://ntuhpc.org/" className="text-blue-500 underline font-bold">(NTUHPC)</a>. I was fortunate to be part of student cluster competition at SC and ISC, mostly because I got to learn so much from incredibly driven and talented friends who challenged and inspired me. My research interests include system for ML, high-performance computing, and simulation.</div>
+          <div className="text-sm">I&apos;m a final year undergraduate student at Nanyang Technological University. My final year research project on Discrete-event Simulation on GPU is advised by Prof. Cai Wentong.</div>
+          <div className="text-sm">I am a member of Supercomputing team at NTU <a href="https://ntuhpc.org/" className="text-blue-500 underline font-bold">(NTUHPC)</a>. I was fortunate to be part of student cluster competition at SC and ISC, mostly because I got to learn so much from incredibly driven and talented friends who challenged and inspired me. My research interests include system for ML, high-performance computing, and simulation.</div>
           <div className="text-sm">I will be joining MPI in Saarbrücken as a research intern this summer.</div>
         </div>
 
@@ -180,9 +181,9 @@ export default function Home() {
 
         <div className="text-xl">
           Education
-          <div className="mt-4 grid grid-cols-8">
-            <img className="h-22 w-16 object-scale-down" src={ntulogo.src} />
-            <div className="col-span-7 text-base">
+          <div className="mt-4 grid grid-cols-4 md:grid-cols-8 gap-8">
+            <img className="h-24 w-18 object-scale-down" src={ntulogo.src} />
+            <div className="col-span-2 col-start-2 md:col-span-7 text-base">
               <div className="grid-cols-1">
                 <div className="font-bold">🐯🐯🐯 Nanyang Technological University, Singapore</div>
                 <div className="text-sm">
@@ -225,9 +226,9 @@ export default function Home() {
            </div>
          </div>*/}
 
-          <div className="mt-4 grid grid-cols-8">
-            <img className="h-24 w-24" src={nscclogo.src} />
-            <div className="col-span-7 text-base">
+          <div className="mt-4 grid grid-cols-4 md:grid-cols-8 gap-8">
+            <img className="h-24 w-24 object-scale-down" src={nscclogo.src} />
+            <div className="col-span-2 col-start-2 md:col-span-7 text-base">
               <div className="grid-cols-1">
                 <div className="font-bold">National Supercomputing Centre Singapore</div>
                 <div className="text-sm">
@@ -240,9 +241,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-4 grid grid-cols-8">
-            <img className="h-24 w-18 ml-2" src={ntulogo.src} />
-            <div className="col-span-7 text-base">
+          <div className="mt-4 grid grid-cols-4 md:grid-cols-8 gap-8">
+            <img className="h-24 w-18 ml-2 object-scale-down" src={ntulogo.src} />
+            <div className="col-span-2 col-start-2 md:col-span-7 text-base">
               <div className="grid-cols-1">
                 <div className="font-bold">NTU S-Lab</div>
                 <div className="text-sm">
@@ -254,9 +255,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-4 grid grid-cols-8">
+          <div className="mt-4 grid grid-cols-4 md:grid-cols-8 gap-8">
             <img className="h-22 w-20 object-scale-down" src={astarlogo.src} />
-            <div className="col-span-7 text-base">
+            <div className="col-span-2 col-start-2 md:col-span-7 text-base">
               <div className="grid-cols-1">
                 <div className="font-bold">Institute for Infocomm Research (I2R), A*STAR</div>
                 <div className="text-sm">
