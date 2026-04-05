@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
           data-website-id="37d01629-c9ea-4592-b70e-216870c0523f"
           strategy="afterInteractive"
         />
-        <meta name="robots" content="noindex" />
+        {/*<meta name="robots" content="noindex" /> */}
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={jetbrainsMono.className}>{children}</body>
