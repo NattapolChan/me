@@ -143,7 +143,7 @@ export default function Home() {
             <div className="gap-8 mt-0 mb-2">
               <div>
                 <h1 className="text-2xl font-bold mb-2 text-gray-950">
-                  <u>Nat</u>tapol Chanpaisit
+                  Nattapol Chanpaisit
                 </h1>
                 Undergrad @ NTU, Singapore
               </div>
@@ -241,11 +241,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-4 grid grid-cols-4 md:grid-cols-8 gap-8">
+    {/*<div className="mt-4 grid grid-cols-4 md:grid-cols-8 gap-8">
             <img className="h-24 w-18 ml-2 object-scale-down" src={ntulogo.src} />
             <div className="col-span-2 col-start-2 md:col-span-7 text-base">
               <div className="grid-cols-1">
-                <div className="font-bold">NTU S-Lab</div>
+                <div className="font-bold">NTU</div>
                 <div className="text-sm">
                   <div>Sep 2023 - Mar 2024</div>
                   <div>URECA Research Programme</div>
@@ -253,7 +253,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div>*/}
 
           <div className="mt-4 grid grid-cols-4 md:grid-cols-8 gap-8">
             <img className="h-22 w-20 object-scale-down" src={astarlogo.src} />
